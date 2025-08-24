@@ -1,7 +1,5 @@
 # mysql-backup-to-r2
 
-English | [한국어](README.ko.md)
-
 자동으로 **MySQL/MariaDB** 데이터베이스를 백업하고\
 **Cloudflare R2** 스토리지에 업로드하는 설치 스크립트입니다.
 
