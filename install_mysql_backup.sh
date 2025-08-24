@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
+# ensure PATH contains /usr/local/bin for non-login shells & sudo secure_path
+export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
+hash -r
+
 # =================== 기본 설정(원하면 바꿔도 됨) ===================
 AWS_PROFILE="r2-backup"                  # R2용 AWS CLI 프로필명
 BACKUP_DIR="/root/backup"
