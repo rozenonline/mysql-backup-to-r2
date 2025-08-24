@@ -127,6 +127,10 @@ cat > "$BACKUP_BIN" <<'SCRIPT_EOF'
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
+# ensure PATH contains /usr/local/bin for non-login shells & sudo secure_path
+export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
+hash -r
+
 # ================= [ 설정 ] =================
 BACKUP_DIR="/root/backup"
 LOCK_FILE="/var/lock/mysql-backup.lock"
