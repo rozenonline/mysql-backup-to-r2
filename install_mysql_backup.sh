@@ -202,7 +202,7 @@ fi
 echo "$LOG_PREFIX 시작: $HOST / 대상 DB: $(echo "$DBS" | tr '\n' ' ')"
 
 # ================= [ 옵션 구성 ] =================
-DUMP_OPTS="--single-transaction --quick --routines --events --triggers"
+DUMP_OPTS="--single-transaction --quick --routines --events --triggers --skip-lock-tables"
 supports_opt "--set-gtid-purged" && DUMP_OPTS+=" --set-gtid-purged=OFF"
 supports_opt "--column-statistics" && DUMP_OPTS+=" --column-statistics=0"
 
